@@ -11,7 +11,7 @@ const showButton = (e) => {
 const updateButton = (button,e) => {
     if (validate(button,e)) {
         console.log(e.srcElement)
-        currentText = '' + (e.srcElement.innerText || e.srcElement.getAttribute('title') || e.srcElement.getAttribute('alt'))
+        currentText = '' + (e.srcElement.innerText || e.srcElement.getAttribute('title') || e.srcElement.getAttribute('alt') || e.srcElement.getAttribute('src'))
         button.children[0].onclick = () => {
             synthesize(currentText)
         }
@@ -40,5 +40,5 @@ const initializeButton = () => {
 }
 const validate = (button,e) => {
     const validType = (e.srcElement && !(e.srcElement === button) && !(e.srcElement === button.children[0]) && !(e.srcElement === document.body) && !(e.srcElement === document.body.parentNode) && !(e.srcElement.classList.contains('maincontent')))
-    return validType && (e.srcElement.innerText || e.srcElement.getAttribute('title') || e.srcElement.getAttribute('alt'))
+    return validType && (e.srcElement.innerText || e.srcElement.getAttribute('title') || e.srcElement.getAttribute('alt') || e.srcElement.getAttribute('src'))
 }
