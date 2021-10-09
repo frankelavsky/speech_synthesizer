@@ -17,7 +17,7 @@ const updateButton = (button,e) => {
         }
         // e.srcElement.appendChild(button)
         const targetCoords = e.srcElement.getBoundingClientRect()
-        button.setAttribute('style',`left: ${targetCoords.left}px; top: ${window.scrollY + targetCoords.top - 22}px`)
+        button.setAttribute('style',`left: ${targetCoords.left}px; top: ${window.scrollY + targetCoords.top - 21}px`)
         removeHighlight = document.body.getElementsByClassName('highlight')
         if (removeHighlight[0]) {
             removeHighlight[0].classList.remove('highlight')
