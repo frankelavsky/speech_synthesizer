@@ -3,10 +3,10 @@
     "name": "Access Reader",
     "minimum_chrome_version": "24.0.1307.0",
     "version": "0.0.1",
-    "homepage_url": "http://accessibilitycourse.github.io",
+    "homepage_url": "https://accessibilitycourse.github.io",
     "icons": {},
     "content_scripts": [{
-        "matches": ["http://accessibilitycourse.github.io/*"],
+        "matches": ["https://accessibilitycourse.github.io/*"],
         "js": ["scripts/reader.js"],
         "css": ["css/reader.css"],
         "run_at": "document_idle"
