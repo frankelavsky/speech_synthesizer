@@ -1,3 +1,6 @@
-export const synthesize = (e, a) => {
-    console.log('me',e,a)
+const synthesize = (t) => {
+    const utter = new window.SpeechSynthesisUtterance(t);
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utter)
 }
